@@ -21,7 +21,7 @@ class App extends React.Component {
     clouds: '',
     sunrise: '',
     sunset: '',
-    
+    error: false,
     }
 
     onInputChange =(event) => {
@@ -38,12 +38,13 @@ class App extends React.Component {
 
       axios
         .get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&units=metric&appid=05508bb378ad891b493b0c886cca7a57`)
-        .then(response => {
-            console.log(response.data)
+        .then((response) => {
           return response.data})
-          .then(data =>
+          .then(data => {
             this.setState(state => ({
-      
+
+                error: false,
+                city:state.value,
                 long: data.coord.lon,
                 lati: data.coord.lat,
                 weatherDescription: data.weather[0].description,
@@ -58,9 +59,14 @@ class App extends React.Component {
                 sunrise: data.sys.sunrise,
                 sunset: data.sys.sunset,
             }))
-            );
-        }
-
+          })
+        .catch(error => { console.log(error)
+              this.setState(prevState => ({
+                error: true,
+                city: prevState.value
+              })) 
+        })
+    }
   
 
 

@@ -12,10 +12,14 @@ import React from 'react';
 function ViewWeather (props) {
       const {long, lati, weatherDescription, weatherIcon, temp, pressure, humidity,
     tempMin, tempMax, windSpeed, clouds, sunrise, sunset,
-    } = props.weather
+    error, city} = props.weather
     
           return (
               <div>
+              {error ? (<span>Please try different city {city}</span>)
+            : (
+            <div>
+             <h3> {city} </h3>
              <h3> {long} </h3>
              <h3> {lati} </h3>
              <h3> {weatherDescription} </h3>
@@ -29,9 +33,10 @@ function ViewWeather (props) {
              <h3> {sunset} </h3>
              <h3> {pressure} </h3>
              <h3> {humidity} </h3>
-             
              </div>
-              )
+            )}
+             </div>
+            )
         }
       
   
