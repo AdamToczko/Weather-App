@@ -14,8 +14,8 @@ function ViewWeather (props) {
     tempMin, tempMax, windSpeed, clouds, sunrise, sunset,
     error, city} = props.weather
     
-    let Surnise = new Date(sunrise*1000);
-    let Sunset = new Date(sunset*1000);
+    let Sunrise = new Date(sunrise*1000).toLocaleTimeString();
+    let Sunset = new Date(sunset*1000).toLocaleTimeString();
 
           return (
               <div>
@@ -39,8 +39,8 @@ function ViewWeather (props) {
             <div class="col-6 col-sm-4">Pressure: <span style={{color: 'yellow'}}>{pressure} </span>hpa</div>
             <div class="col-6 col-sm-4">Humidity: <span style={{color: 'yellow'}}>{humidity}</span> %</div>
             <div class="w-100 d-none d-md-block"></div>
-            <div class="col-6 col-sm-4">Sunrise: <span style={{color: 'yellow'}}>{sunrise}</span></div>
-            <div class="col-6 col-sm-4">Sunset: <span style={{color: 'yellow'}}>{sunset}</span></div>
+            <div class="col-6 col-sm-4">Sunrise: <span style={{color: 'yellow'}}>{Sunrise}</span></div>
+            <div class="col-6 col-sm-4">Sunset: <span style={{color: 'yellow'}}>{Sunset}</span></div>
             </div> 
              </div>
             )}
