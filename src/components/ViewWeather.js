@@ -35,6 +35,7 @@ class ViewWeather extends React.Component {
       axios
         .get("http://api.openweathermap.org/data/2.5/weather?q=Gdansk&units=metric&appid=05508bb378ad891b493b0c886cca7a57")
         .then(response => {
+            console.log(response.data)
           return response.data;})
           .then(data =>
             this.setState({
@@ -64,7 +65,7 @@ class ViewWeather extends React.Component {
              <h3> {this.state.long} </h3>
              <h3> {this.state.lati} </h3>
              <h3> {this.state.weatherDescription} </h3>
-             <h3> {this.state.weatherIcon} </h3>
+             <img src={`http://openweathermap.org/img/wn/${this.state.weatherIcon}@2x.png`}/>
              <h3> {this.state.temp} </h3>
              <h3> {this.state.tempMin} </h3>
              <h3> {this.state.tempMax} </h3>
