@@ -23,6 +23,7 @@ class App extends React.Component {
     sunrise: '',
     sunset: '',
     error: false,
+    country: ''
     }
 
     onInputChange =(event) => {
@@ -59,6 +60,7 @@ class App extends React.Component {
                 clouds: data.weather[0].main,
                 sunrise: data.sys.sunrise,
                 sunset: data.sys.sunset,
+                country: data.sys.country,
             }))
           })
         .catch(error => { console.log(error)
