@@ -3,6 +3,7 @@ import './App.css';
 import axios from "axios";
 import ViewWeather from './components/ViewWeather';
 import SearchCity from './components/SearchCity';
+import Clock from './components/Clock'
 
 class App extends React.Component {
   
@@ -74,17 +75,26 @@ class App extends React.Component {
   return (
     <div className="App">
       <div className="AppShadow">
+
+        <div className="AppHeader">
+        <h3>Your current time:</h3>
+        <Clock />
+        <SearchCity 
+        value={this.state.value}
+        change={this.onInputChange}
+        submit={this.handleSubmit}
+        />
+        </div>
+      <div className="AppFooter">
+      
       <ViewWeather 
       weather={this.state}
-      />
       
-      <SearchCity 
-      value={this.state.value}
-      change={this.onInputChange}
-      submit={this.handleSubmit}
       />
-      
       </div>
+      </div>
+     
+      
     </div>
   );
 }
