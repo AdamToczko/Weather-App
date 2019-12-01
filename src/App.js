@@ -31,9 +31,10 @@ class App extends React.Component {
   
       this.setState({value: value})
   
-      console.log({value});
+      // console.log({value});
   }
 
+  
 
     handleSubmit = e => {
 		e.preventDefault();
