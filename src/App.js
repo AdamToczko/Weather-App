@@ -23,7 +23,8 @@ class App extends React.Component {
     sunrise: '',
     sunset: '',
     error: false,
-    country: ''
+    country: '',
+    dataNotLoaded: true,
     }
 
     onInputChange =(event) => {
@@ -45,7 +46,7 @@ class App extends React.Component {
           return response.data})
           .then(data => {
             this.setState(state => ({
-
+              dataNotLoaded: false,
                 error: false,
                 city:state.value,
                 long: data.coord.lon,
@@ -75,7 +76,10 @@ class App extends React.Component {
 
 
   render() {
+
+    
   return (
+    
     <div className="App">
       <div className="AppShadow">
 
@@ -92,6 +96,7 @@ class App extends React.Component {
       
       <ViewWeather 
       weather={this.state}
+      imBusy={this.state}
       
       />
       </div>

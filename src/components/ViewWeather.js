@@ -1,22 +1,20 @@
 import React from 'react';
 
 
-// Nazwie miasta, dla którego jest wyświetlana pogoda
-// Położeniu geolokalizacyjnym miasta (latitude, longitude)
-// Aktualnej temperaturze w danej chwili
-// Zakresie temperatur z danego dnia
-// Aktualnej wilgotsności oraz ciśnieniu atmosferycznym
-// Aktualnych opadach oraz wietrze
-
-
 function ViewWeather (props) {
       const {long, lati, weatherDescription, weatherIcon, temp, pressure, humidity,
     tempMin, tempMax, windSpeed, clouds, sunrise, sunset,
-    error, city, country} = props.weather
+    error, city, country, dataNotLoaded} = props.weather
     
     let Sunrise = new Date(sunrise*1000).toLocaleTimeString();
     let Sunset = new Date(sunset*1000).toLocaleTimeString();
 
+
+    if (dataNotLoaded) {
+      return (
+        <div></div>
+      )
+      } else {
           return (
               <div>
               {error ? (<span style={{color: 'red'}}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
@@ -48,7 +46,7 @@ function ViewWeather (props) {
              </div>
             )
         }
-      
+}
   
   
 export default ViewWeather;
