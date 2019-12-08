@@ -4,22 +4,25 @@ import React from 'react';
 function ViewWeather (props) {
       const {long, lati, weatherDescription, weatherIcon, temp, pressure, humidity,
     tempMin, tempMax, windSpeed, clouds, sunrise, sunset,
-    error, city, country, dataNotLoaded} = props.weather
+    error, city, country, dataNotLoaded, timezone} = props.weather
     
     let Sunrise = new Date(sunrise*1000).toLocaleTimeString();
     let Sunset = new Date(sunset*1000).toLocaleTimeString();
 
 
-    if (dataNotLoaded) {
+    if (dataNotLoaded && !error) {
       return (
         <div></div>
       )
+      } else if (error){
+        return (<span style={{color: 'red'}}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
       } else {
           return (
-              <div>
-              {error ? (<span style={{color: 'red'}}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
-            : (
+          
+              
             <div>
+            <div className="col-12 col-sm-4">Current Time: <span style={{color: 'yellow'}}>{timezone}</span> </div>
+            <div className="w-100 d-none d-md-block"></div>
             <div className="row">
             <div className="col-6 col-sm-4">City: <span style={{color: 'yellow'}}>{city}</span> </div>
             <div className="col-6 col-sm-4">Country: <span style={{color: 'yellow'}}>{country}</span> </div>
@@ -42,9 +45,9 @@ function ViewWeather (props) {
             <div className="col-6 col-sm-4">Sunset: <span style={{color: 'yellow'}}>{Sunset}</span></div>
             </div> 
              </div>
-            )}
-             </div>
-            )
+          )
+          
+            
         }
 }
   

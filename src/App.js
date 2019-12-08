@@ -25,6 +25,7 @@ class App extends React.Component {
     error: false,
     country: '',
     dataNotLoaded: true,
+    timezone: '',
     }
 
     onInputChange =(event) => {
@@ -48,7 +49,7 @@ class App extends React.Component {
             this.setState(state => ({
               dataNotLoaded: false,
                 error: false,
-                city:state.value,
+                city: state.value,
                 long: data.coord.lon,
                 lati: data.coord.lat,
                 weatherDescription: data.weather[0].description,
@@ -63,6 +64,7 @@ class App extends React.Component {
                 sunrise: data.sys.sunrise,
                 sunset: data.sys.sunset,
                 country: data.sys.country,
+                timezone: data.timezone
             }))
           })
         .catch(error => { console.log(error)
