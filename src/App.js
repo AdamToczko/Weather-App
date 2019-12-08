@@ -98,7 +98,7 @@ class App extends React.Component {
       
       <ViewWeather 
       weather={this.state}
-      imBusy={this.state}
+     
       
       />
       </div>

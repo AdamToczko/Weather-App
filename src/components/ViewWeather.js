@@ -21,7 +21,7 @@ function ViewWeather (props) {
           
               
             <div>
-            <div className="col-12 col-sm-4">Current Time: <span style={{color: 'yellow'}}>{timezone}</span> </div>
+            <div className="col-12 col-sm-12">Current Time: <span style={{color: 'yellow'}}>{timezone}</span> </div>
             <div className="w-100 d-none d-md-block"></div>
             <div className="row">
             <div className="col-6 col-sm-4">City: <span style={{color: 'yellow'}}>{city}</span> </div>

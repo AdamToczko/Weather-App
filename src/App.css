@@ -30,15 +30,15 @@
   /* text-align: center; */
   left: 14%;
   height:40%;
-  font-size: 26px;
-  line-height: 50px;
+  font-size: 1.4em;
+  line-height: 1.8em;
 }
 
 .AppHeader {
   color: white;
   width:70%;
   position: fixed;
-  top: 15%;
+  top: 10%;
   left: 14%;
 }
 
