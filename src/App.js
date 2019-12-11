@@ -42,7 +42,7 @@ class App extends React.Component {
 		e.preventDefault();
 
       axios
-        .get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&units=metric&appid=05508bb378ad891b493b0c886cca7a57`)
+        .get(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&units=metric&appid=05508bb378ad891b493b0c886cca7a57`)
         .then((response) => {
           return response.data})
           .then(data => {
