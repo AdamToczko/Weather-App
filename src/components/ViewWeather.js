@@ -30,9 +30,9 @@ function ViewWeather (props) {
             <div className="w-100 d-none d-md-block"></div>
             <div className="col-6 col-sm-4">longitude: <span style={{color: 'yellow'}}>{long}</span> </div>
             <div className="col-6 col-sm-4">latitude: <span style={{color: 'yellow'}}>{lati}</span> </div>
-            <div className="col-6 col-sm-4">Temperature now: <span style={{color: 'yellow'}}>{temp} </span>°C</div>
+            <div className="col-6 col-sm-4">Wind: <span style={{color: 'yellow'}}>{windSpeed}</span> m/s</div>
             <div className="w-100 d-none d-md-block"></div>
-            <div className="col-6 col-sm-4"> <img src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}/></div>
+            <div className="col-6 col-sm-4">Temperature now: <span style={{color: 'yellow'}}>{temp} </span>°C</div>
             <div className="col-6 col-sm-4">Min temp: <span style={{color: 'yellow'}}>{tempMin}</span> °C</div>
             <div className="col-6 col-sm-4">Max temp: <span style={{color: 'yellow'}}>{tempMax}</span> °C</div>
             <div className="w-100 d-none d-md-block"></div>
@@ -40,9 +40,10 @@ function ViewWeather (props) {
             <div className="col-6 col-sm-4">Pressure: <span style={{color: 'yellow'}}>{pressure} </span>hpa</div>
             <div className="col-6 col-sm-4">Humidity: <span style={{color: 'yellow'}}>{humidity}</span> %</div>
             <div className="w-100 d-none d-md-block"></div>
-            <div className="col-6 col-sm-4">Wind: <span style={{color: 'yellow'}}>{windSpeed}</span> m/s</div>
+            
             <div className="col-6 col-sm-4">Sunrise: <span style={{color: 'yellow'}}>{Sunrise}</span></div>
             <div className="col-6 col-sm-4">Sunset: <span style={{color: 'yellow'}}>{Sunset}</span></div>
+            <div className="col-6 col-sm-4"> <img src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}/></div>
             </div> 
              </div>
           )
