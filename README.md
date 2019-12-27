@@ -1,3 +1,7 @@
+Live demo  https://adamtoczko.github.io/Weather-App/
+
+Basic Weather App in React connected with https://openweathermap.org/ showing current weather based on City search
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
