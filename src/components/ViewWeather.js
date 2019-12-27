@@ -46,9 +46,7 @@ function ViewWeather (props) {
             <div className="col-6 col-sm-4"> <img src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}/></div>
             </div> 
              </div>
-          )
-          
-            
+          ) 
         }
 }
   
