@@ -45,3 +45,39 @@
 .App-link {
   color: #09d3ac;
 }
+
+@media only screen and (max-width: 850px) {
+.AppHeader {
+top: 5%;
+font-size: 1em;
+}
+
+.AppFooter {
+bottom: 31%;
+position: fixed;
+width: 90%;
+left: 1%;
+font-size: 1.2em;
+line-height: 1.8em;
+
+}
+
+h3,h4 {
+  font-size:1.2em;
+}
+
+}
+
+
+@media only screen and (max-width: 550px) {
+  .AppHeader {
+  left: 5%;
+  width:90%
+  }
+}
+@media only screen and (max-width: 550px) {
+  .AppHeader {
+  left: 1%;
+  width:98%
+  }
+}
