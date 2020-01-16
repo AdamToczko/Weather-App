@@ -15,12 +15,12 @@ function ViewWeather (props) {
         <div></div>
       )
       } else if (error){
-        return (<span style={{color: 'red'}}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
+        return (<span style={{color: 'white', background: 'rgba(0,106,221,0.2)'}}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
       } else {
           return (
-          
-              
-            <div>
+            
+            // #03c6fc #02C6FC #006add
+            <div style={{background: 'rgba(0,106,221,0.1)', borderRadius: '3%'}} >
             {/* <div className="col-12 col-sm-12">Current Time: {n} <span style={{color: 'yellow'}}>{timezone}</span> </div> */}
             <div className="w-100 d-none d-md-block"></div>
             <div className="row">
