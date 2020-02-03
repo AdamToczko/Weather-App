@@ -56,7 +56,7 @@ font-size: 1em;
 bottom: 31%;
 position: fixed;
 width: 90%;
-left: 1%;
+left: 6%;
 font-size: 1.2em;
 line-height: 1.8em;
 
@@ -78,7 +78,7 @@ h3,h4 {
 .AppFooter {
     bottom: 38%;
     width: 90%;
-    left: 1%;
+    left: 5%;
     font-size: 1.1em;
     line-height: 2.3em;
 }
@@ -92,7 +92,7 @@ h3,h4 {
 
   .AppFooter {
     width: 98%;
-    left: 0%;
+    left: 1%;
   }
 }
 

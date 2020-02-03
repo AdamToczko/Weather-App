@@ -10,9 +10,15 @@
 }
 
 .displayWrapper {
-    background: rgba(0,106,221,0.1);
+    background: rgba(0,106,221,0.4);
     border-radius: 3%;
 }
 .displayFont {
     color: yellow;
+}
+
+@media only screen and (min-width: 850px) {
+    .displayWrapper {
+        box-shadow:20px 10px 5px 12px rgba(1, 10, 19, 0.4);
+    }
 }
