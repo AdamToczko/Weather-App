@@ -5,6 +5,7 @@ import ViewWeather from './components/ViewWeather';
 import SearchCity from './components/SearchCity';
 import Clock from './components/Clock'
 
+
 class App extends React.Component {
   
   state = {
@@ -88,6 +89,8 @@ class App extends React.Component {
         <div className="AppHeader">
         <h3>Your current time:</h3>
         <Clock />
+     
+
         <SearchCity 
         value={this.state.value}
         change={this.onInputChange}
