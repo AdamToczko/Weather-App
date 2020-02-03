@@ -2,8 +2,7 @@ import React from 'react';
 import styles from "./SearchCity.module.css";
 
 function SearchCity (props) {
-   
-    
+   console.log(props)
     return (
         <div className={styles.wrapper}>
         <form className={styles.insideWrapper} onSubmit={props.submit}>
@@ -12,8 +11,6 @@ function SearchCity (props) {
         </form>
       </div>
     )
-    
     }
-
 
     export default SearchCity;

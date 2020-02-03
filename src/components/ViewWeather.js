@@ -17,37 +17,37 @@ function ViewWeather (props) {
         <div></div>
       )
       } else if (error){
-        return (<span className={styles.errorMessage1}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
+        return (<span className={styles.errorMessage1}>Please try different city as <span className={styles.errorMessage2}>{city}</span> is not in our database </span>)
       } else {
           return (
           
-            <div style={{background: 'rgba(0,106,221,0.1)', borderRadius: '3%'}} >
-            <div className="col-12 col-sm-12">Searched City date & time <span style={{color: 'yellow'}}>
+            <div className={styles.displayWrapper} >
+            <div className="col-12 col-sm-12">Searched City date & time <span className={styles.displayFont} >
               {<Moment add={{ seconds: timezone -3600}}
               format='YYYY-MM-DD hh:mm:ss'
               >{date}</Moment>} </span> </div>
            
             <div className="w-100 d-none d-md-block"></div>
             <div className="row">
-            <div className="col-6 col-sm-4">City: <span style={{color: 'yellow'}}>{city}</span> </div>
-            <div className="col-6 col-sm-4">Country: <span style={{color: 'yellow'}}>{country}</span> </div>
-            <div className="col-6 col-sm-4">Description: <span style={{color: 'yellow'}}>{weatherDescription}</span> </div>
+            <div className="col-6 col-sm-4">City: <span className={styles.displayFont} >{city}</span> </div>
+            <div className="col-6 col-sm-4">Country: <span className={styles.displayFont} >{country}</span> </div>
+            <div className="col-6 col-sm-4">Description: <span className={styles.displayFont} >{weatherDescription}</span> </div>
             <div className="w-100 d-none d-md-block"></div>
-            <div className="col-6 col-sm-4">longitude: <span style={{color: 'yellow'}}>{long}</span> </div>
-            <div className="col-6 col-sm-4">latitude: <span style={{color: 'yellow'}}>{lati}</span> </div>
-            <div className="col-6 col-sm-4">Wind: <span style={{color: 'yellow'}}>{windSpeed}</span> m/s</div>
+            <div className="col-6 col-sm-4">longitude: <span className={styles.displayFont} >{long}</span> </div>
+            <div className="col-6 col-sm-4">latitude: <span className={styles.displayFont} >{lati}</span> </div>
+            <div className="col-6 col-sm-4">Wind: <span className={styles.displayFont} >{windSpeed}</span> m/s</div>
             <div className="w-100 d-none d-md-block"></div>
-            <div className="col-6 col-sm-4">Temperature now: <span style={{color: 'yellow'}}>{temp} </span>°C</div>
-            <div className="col-6 col-sm-4">Min temp: <span style={{color: 'yellow'}}>{tempMin}</span> °C</div>
-            <div className="col-6 col-sm-4">Max temp: <span style={{color: 'yellow'}}>{tempMax}</span> °C</div>
+            <div className="col-6 col-sm-4">Temperature now: <span className={styles.displayFont} >{temp} </span>°C</div>
+            <div className="col-6 col-sm-4">Min temp: <span className={styles.displayFont} >{tempMin}</span> °C</div>
+            <div className="col-6 col-sm-4">Max temp: <span className={styles.displayFont} >{tempMax}</span> °C</div>
             <div className="w-100 d-none d-md-block"></div>
-            <div className="col-6 col-sm-4">Clouds: <span style={{color: 'yellow'}}>{clouds}</span> </div>
-            <div className="col-6 col-sm-4">Pressure: <span style={{color: 'yellow'}}>{pressure} </span>hpa</div>
-            <div className="col-6 col-sm-4">Humidity: <span style={{color: 'yellow'}}>{humidity}</span> %</div>
+            <div className="col-6 col-sm-4">Clouds: <span className={styles.displayFont} >{clouds}</span> </div>
+            <div className="col-6 col-sm-4">Pressure: <span className={styles.displayFont} >{pressure} </span>hpa</div>
+            <div className="col-6 col-sm-4">Humidity: <span className={styles.displayFont} >{humidity}</span> %</div>
             <div className="w-100 d-none d-md-block"></div>
             
-            <div className="col-6 col-sm-4">Sunrise: <span style={{color: 'yellow'}}>{Sunrise}</span></div>
-            <div className="col-6 col-sm-4">Sunset: <span style={{color: 'yellow'}}>{Sunset}</span></div>
+            <div className="col-6 col-sm-4">Sunrise: <span className={styles.displayFont} >{Sunrise}</span></div>
+            <div className="col-6 col-sm-4">Sunset: <span className={styles.displayFont} >{Sunset}</span></div>
             <div className="col-6 col-sm-4"> <img src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}/></div>
             </div> 
              </div>

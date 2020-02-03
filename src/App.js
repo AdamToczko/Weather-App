@@ -60,7 +60,7 @@ class App extends React.Component {
                 sunrise: data.sys.sunrise,
                 sunset: data.sys.sunset,
                 country: data.sys.country,
-                timezone: data.timezone
+                timezone: data.timezone,
             }))
           })
         .catch(error => { console.log(error)
@@ -71,10 +71,7 @@ class App extends React.Component {
         })
     }
   
-
-
   render() {
-
     
   return (
     
@@ -84,8 +81,6 @@ class App extends React.Component {
         <div className="AppHeader">
         <h3>Your current time:</h3>
         <Clock />
-     
-
         <SearchCity 
         value={this.state.value}
         change={this.onInputChange}
@@ -96,13 +91,9 @@ class App extends React.Component {
       
       <ViewWeather 
       weather={this.state}
-     
-      
       />
       </div>
       </div>
-     
-      
     </div>
   );
 }

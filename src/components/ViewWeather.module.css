@@ -8,3 +8,11 @@
     color: yellow;
     font-weight: bold;
 }
+
+.displayWrapper {
+    background: rgba(0,106,221,0.1);
+    border-radius: 3%;
+}
+.displayFont {
+    color: yellow;
+}
