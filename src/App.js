@@ -61,6 +61,7 @@ class App extends React.Component {
                 sunset: data.sys.sunset,
                 country: data.sys.country,
                 timezone: data.timezone,
+                value:""
             }))
           })
         .catch(error => { console.log(error)
