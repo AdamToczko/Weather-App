@@ -31,13 +31,8 @@ class App extends React.Component {
 
     onInputChange =(event) => {
       const {value} = event.target
-  
       this.setState({value: value})
-  
-      // console.log({value});
   }
-
-  
 
     handleSubmit = e => {
 		e.preventDefault();

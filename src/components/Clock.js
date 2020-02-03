@@ -15,7 +15,6 @@ class Clock extends React.Component {
 
   launchClock = () => {
     this.clock = setInterval(() => {
-      // console.log("tick tock");
       this.setState({
         now: new Date().toLocaleTimeString()
       });
@@ -24,6 +23,7 @@ class Clock extends React.Component {
 
   render() {
     return <h4>{this.state.now}</h4>;
+  
   }
 }
 

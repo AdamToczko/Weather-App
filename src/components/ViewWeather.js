@@ -1,5 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
+import styles from "./ViewWeather.module.css";
 
 function ViewWeather (props) {
       const {long, lati, weatherDescription, weatherIcon, temp, pressure, humidity,
@@ -16,14 +17,14 @@ function ViewWeather (props) {
         <div></div>
       )
       } else if (error){
-        return (<span style={{color: 'white', background: 'rgba(0,106,221,0.2)'}}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
+        return (<span className={styles.errorMessage1}>Please try different city as <span style={{color: 'yellow'}}>{city}</span> is not in our database </span>)
       } else {
           return (
           
             <div style={{background: 'rgba(0,106,221,0.1)', borderRadius: '3%'}} >
             <div className="col-12 col-sm-12">Searched City date & time <span style={{color: 'yellow'}}>
               {<Moment add={{ seconds: timezone -3600}}
-              format='YYYY-MM-DD hh:mm'
+              format='YYYY-MM-DD hh:mm:ss'
               >{date}</Moment>} </span> </div>
            
             <div className="w-100 d-none d-md-block"></div>
