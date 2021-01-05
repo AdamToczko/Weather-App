@@ -4,7 +4,7 @@
     "private": true,
     "homepage": "https://adamtoczko.github.io/Weather-App/",
     "dependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "gh-pages": "^2.1.1",
         "moment": "^2.27.0",
         "react": "^16.13.1",
